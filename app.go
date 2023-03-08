@@ -7,7 +7,7 @@ import (
 	"strings"
 
 	"github.com/fatih/color"
-	"github.com/likexian/whois-go"
+	"github.com/likexian/whois"
 )
 
 func main() {
@@ -20,14 +20,14 @@ func main() {
 	defer file.Close()
 
 	// Create output files
-	positiveFile, err := os.Create("positive.txt")
+	positiveFile, err := os.Create("available.txt")
 	if err != nil {
 		fmt.Println("Failed to create positive output file: ", err)
 		return
 	}
 	defer positiveFile.Close()
 
-	negativeFile, err := os.Create("negative.txt")
+	negativeFile, err := os.Create("taken.txt")
 	if err != nil {
 		fmt.Println("Failed to create negative output file: ", err)
 		return

@@ -52,7 +52,7 @@ func main() {
 
 			// Print unregistered domains to console in green color
 			green := color.New(color.FgGreen).SprintFunc()
-			fmt.Printf("Unregistered domain found: %s\n", green(domain))
+			fmt.Printf("Unregistered domain: %s\n", green(domain))
 		}
 	}
 
